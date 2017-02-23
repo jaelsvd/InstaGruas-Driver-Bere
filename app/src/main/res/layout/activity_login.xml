@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activty.LoginActivity">
+
+
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/logo"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextLoginUserName"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:hint="E-MAIL"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="25dp"
+        fontPath="LATO-REGULAR.TTF"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableStart="@drawable/ic_email_grey600_18dp"
+        android:drawablePadding="10dp"
+        android:backgroundTint="@color/textBlue"
+        android:textColorHint="@color/textBlue"
+        android:textSize="13sp"
+        android:textColor="@color/textBlue" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextLoginPassword"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:paddingBottom="25dp"
+        android:layout_marginLeft="30dp"
+        fontPath="LATO-REGULAR.TTF"
+        android:layout_marginRight="30dp"
+        android:drawableStart="@drawable/ic_lock_grey600_18dp"
+        android:drawablePadding="10dp"
+        android:backgroundTint="@color/textBlue"
+        android:textColorHint="@color/textBlue"
+        android:textSize="13sp"
+        android:textColor="@color/textBlue" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Login"
+        android:textColor="#fff"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        fontPath="MONTSERRAT-BOLD.TTF"
+        android:textSize="17sp"
+        android:background="@drawable/orange_rounded_button"
+        android:id="@+id/my_login_button"/>
+
+
+
+</LinearLayout>

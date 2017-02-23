@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_history_map"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_profile">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/mapView" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_history_map"
+                android:layout_alignStart="@+id/fragment_history_map"
+                android:layout_alignEnd="@+id/fragment_history_map"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/user"
+                    android:id="@+id/fragment_history_user_image"
+                    android:background="@drawable/background_profile"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:padding="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_history_user_image"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:id="@+id/fragmentDetailUserName"
+                    android:layout_marginTop="3dp"
+                    android:text="Osaid Tahir"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fragment_history_amount"
+                    android:layout_alignTop="@+id/fragment_history_rating_bar"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:text="$100"/>
+
+                <RatingBar
+                    android:id="@+id/fragment_history_rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:rating="0"
+                    android:progressTint="@color/buttonOrange"
+                    android:numStars="5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cccccc"
+                    android:layout_below="@+id/fragmentDetailUserName"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/divider1"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider1"
+                    android:id="@+id/fragmentHistoryRouteDetail"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/minimumRate"
+                        android:textSize="16sp"
+                        android:id="@+id/minimumRate"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/totalDistanceRate"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/minimumRate"
+                        android:id="@+id/ratePerKm"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timeRate"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/ratePerKm"
+                        android:id="@+id/timeRate"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/timeRate"
+                        android:id="@+id/total"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$400.23"
+                        android:layout_alignTop="@+id/minimumRate"
+                        android:layout_alignParentRight="true"
+                        android:textSize="16sp"
+                        android:id="@+id/minimumRateValue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$40.23"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/ratePerKm"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/minimumRate"
+                        android:id="@+id/ratePerKmValue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$30.23"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/timeRate"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/ratePerKm"
+                        android:id="@+id/timeRateValue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$666.23"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/total"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/timeRate"
+                        android:id="@+id/totalValue"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cccccc"
+                    android:layout_below="@+id/fragmentHistoryRouteDetail"
+                    android:id="@+id/divider2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider2"
+                    android:visibility="invisible"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/fragmentDetailPaymentImage"
+                        android:src="@drawable/payment"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/fragmentDetailPaymentImage"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/fragmentDetailPaymentImage"
+                        android:gravity="center_vertical"
+                        android:layout_alignBottom="@+id/fragmentDetailPaymentImage"
+                        android:text="Payment Method xxxx-xxx-121"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

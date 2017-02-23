@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "768443142968",
+    "firebase_url": "https://instagruas-driver-67f54.firebaseio.com",
+    "project_id": "instagruas-driver-67f54",
+    "storage_bucket": "instagruas-driver-67f54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768443142968:android:1be4716caccfdcaa",
+        "android_client_info": {
+          "package_name": "com.umer.towtruckdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768443142968-hqvgd9n9bcskjj9frtgapsu9gbt2spg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHmerS4niva7qDhPF_aYsidT0pMTwFhxU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

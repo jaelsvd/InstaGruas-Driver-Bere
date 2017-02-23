@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/background_profile">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/customerPic"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/customerInfo"
+            android:layout_marginStart="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFinalAmount"
+                android:text="$ 45"
+                android:textStyle="bold"
+                android:textColor="@color/topBar"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customerName"
+                android:textSize="14sp"
+                android:textColor="@color/topBar"
+                android:text="Charlie Uncle"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customerRating"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:numStars="5"
+                android:stepSize="1"
+                android:max="5"
+                android:rating="3"
+                android:progressTint="@color/buttonOrange" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationImages"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/imagea"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageA" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:id="@+id/line"
+                android:background="#a9a9a9" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imageb"
+                android:id="@+id/imageB" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/origin"
+                android:textColor="@color/topBar"
+                android:layout_marginBottom="2dp"
+                android:textSize="12sp"
+                android:text="@string/originAddress"/>
+            <View android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:id="@+id/line1"
+                android:background="#a9a9a9"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:id="@+id/destination"
+                android:textColor="@color/topBar"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:text="@string/destinationAddress"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

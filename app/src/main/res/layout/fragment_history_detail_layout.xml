@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTotalFare"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@color/topBar"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:text="@string/totalFare"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTotalDistance"
+        android:layout_below="@+id/tvTotalFare"
+        android:layout_alignStart="@+id/tvTotalFare"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:text="7 km" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageCalendar"
+        android:layout_below="@+id/tvTotalDistance"
+        android:layout_alignStart="@+id/tvTotalFare"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/calendar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTime"
+        android:layout_alignTop="@+id/imageCalendar"
+        android:layout_toEndOf="@+id/imageCalendar"
+        android:layout_marginStart="5dp"
+        android:textSize="14sp"
+        android:text="05:53 PM"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDate"
+        android:layout_toEndOf="@+id/imageCalendar"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginStart="5dp"
+        android:text="@string/date"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationImages"
+        android:layout_marginTop="40dp"
+        android:layout_alignStart="@+id/imageCalendar"
+        android:layout_below="@+id/imageCalendar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a"
+            android:layout_alignParentTop="true"
+            android:id="@+id/imageA" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/imageA"
+            android:id="@+id/line"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_centerHorizontal="true"
+            android:background="#a9a9a9" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:src="@drawable/b"
+            android:id="@+id/imageB" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationInfo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignBottom="@+id/locationImages"
+        android:layout_toEndOf="@+id/locationImages"
+        android:layout_alignTop="@+id/locationImages">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOrigin"
+            android:text="@string/originAddress"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDestination"
+            android:text="@string/destinationAddress"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerInfo"
+        android:layout_below="@+id/locationInfo"
+        android:layout_alignStart="@+id/imageCalendar"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/customerPic"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blur"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customerName"
+            android:layout_alignTop="@+id/customerPic"
+            android:layout_toEndOf="@+id/customerPic"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:text="Aristotle"/>
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customerRating"
+            android:layout_below="@+id/customerName"
+            android:layout_toEndOf="@+id/customerPic"
+            android:layout_alignStart="@+id/customerName"
+            android:layout_marginTop="5dp"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:numStars="5"
+            android:stepSize="1"
+            android:max="5"
+            android:rating="3"
+            android:progressTint="@color/buttonOrange" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customerName"
+            android:background="@android:color/transparent"
+            android:layout_alignStart="@+id/customerRating"
+            android:layout_alignEnd="@+id/customerRating"
+            android:layout_alignTop="@+id/customerRating"
+            android:layout_alignBottom="@+id/customerRating"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_below="@+id/customerInfo"
+        android:layout_marginTop="10dp"
+        android:id="@+id/divider1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:id="@+id/fragmentHistoryRouteDetail"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minimumRate"
+            android:textSize="16sp"
+            android:id="@+id/minimumRate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalDistanceRate"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/minimumRate"
+            android:id="@+id/ratePerKm"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timeRate"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/ratePerKm"
+            android:id="@+id/timeRate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/timeRate"
+            android:id="@+id/total"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$400.23"
+            android:layout_alignTop="@+id/minimumRate"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:id="@+id/minimumRateValue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$40.23"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ratePerKm"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/minimumRate"
+            android:id="@+id/ratePerKmValue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$30.23"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/timeRate"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/ratePerKm"
+            android:id="@+id/timeRateValue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$666.23"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/total"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/timeRate"
+            android:id="@+id/totalValue"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</ScrollView>

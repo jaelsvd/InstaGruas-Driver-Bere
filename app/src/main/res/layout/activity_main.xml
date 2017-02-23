@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.umer.towtruckdriver.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/topBar"
+        android:id="@+id/toolBar"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/white_rounded_button"
+            android:gravity="center"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/buttonOrange"
+            android:text="@string/go_online"
+            android:id="@+id/driverStatus"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/history"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/historyIcon"
+            android:layout_alignTop="@+id/driverStatus"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:layout_above="@+id/bottom_navigation"
+        android:id="@+id/container">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:visibility="visible"
+        android:id="@+id/userRequestNotification"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_profile">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/user"
+            android:id="@+id/userPic"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customerName"
+            android:layout_toRightOf="@+id/userPic"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/userPic"
+            android:text="@string/driver_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/customerName"
+            android:layout_below="@+id/customerName"
+            android:text="is requesting for a Ride!"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/customerName"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:id="@+id/time"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userRequestNotificationTimer"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="@drawable/blue_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer"
+            android:text="@string/time_ten"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timer"
+            android:text="Press To Accept"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:visibility="visible"
+        android:id="@+id/userAddressDetails"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_profile">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customerAddress"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/customerAddress"
+            android:layout_toStartOf="@+id/navigationImage"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:maxLines="2"
+            android:id="@+id/userAddress"
+            android:text="@string/user_address"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/navigation"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/navigationImage"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:visibility="visible"
+        android:id="@+id/userContactDetails"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_profile">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:id="@+id/userContactDetailsPic"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userContactDetailsName"
+            android:layout_toEndOf="@+id/userContactDetailsPic"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/userContactDetailsPic"
+            android:text="@string/driver_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/userContactDetailsName"
+            android:layout_below="@+id/userContactDetailsName"
+            android:id="@+id/userPickUp"
+            android:text="@string/pick_up"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/userContactDetailsName"
+            android:layout_below="@+id/userPickUp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:id="@+id/userPhone"
+            android:text="@string/userPhone"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/userPhone"
+            android:layout_centerVertical="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginStart="15dp"
+            android:id="@+id/userRating"
+            android:progressTint="@color/buttonOrange"
+            android:max="5"
+            android:rating="3"
+            android:numStars="5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRatingNum"
+            android:layout_marginStart="15dp"
+            android:text="3"
+            android:layout_alignTop="@+id/userPhone"
+            android:layout_toEndOf="@+id/userPhone"
+            android:layout_toStartOf="@+id/btnCall"
+            android:layout_below="@+id/userRating"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/btnCall"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/userRating"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            style="@android:style/Widget.DeviceDefault.Button.Small"
+            android:background="@drawable/blue_rounded_button"
+            android:text="@string/call"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:visibility="gone"
+        android:id="@+id/driverReachedNotification"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_green">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/destination"
+            android:id="@+id/driverReachedNotificationImage"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"/>
+
+        <!--<com.umer.towtruckdriver.Models.SlideButton
+            android:id="@+id/driverReachedSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:progress="5"
+            android:max="100"
+            android:progressDrawable="@android:color/transparent"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:thumb="@drawable/check"/>-->
+
+        <SeekBar
+            android:id="@+id/driverReachedSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:progress="5"
+            android:max="100"
+            android:progressDrawable="@android:color/transparent"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:thumb="@drawable/check"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:id="@+id/driverReachedNotificationData"
+            android:layout_toEndOf="@+id/driverReachedNotificationImage"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You've Arrived at your Destination!"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:id="@+id/driverReached" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driverReached"
+                android:textColor="@color/colorWhite"
+                android:layout_alignStart="@+id/driverReached"
+                android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                android:text="Slide to Start Ride"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:visibility="gone"
+        android:id="@+id/driverReachedDestinationNotification"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_red">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/destination"
+            android:id="@+id/driverReachedDestinationNotificationImage"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"/>
+
+       <!-- <com.umer.towtruckdriver.Models.SlideButton
+            android:id="@+id/userReachedSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:progress="5"
+            android:max="100"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:thumb="@drawable/check"/>-->
+
+        <SeekBar
+            android:id="@+id/driverReachedDestinationSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:progress="5"
+            android:max="100"
+            android:progressDrawable="@android:color/transparent"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:thumb="@drawable/check"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/driverReachedDestinationNotificationImage"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You've Arrived at your Destination!"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:id="@+id/driverReached1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driverReached1"
+                android:textColor="@color/colorWhite"
+                android:layout_alignStart="@+id/driverReached1"
+                android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                android:text="Tap to Start Ride"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

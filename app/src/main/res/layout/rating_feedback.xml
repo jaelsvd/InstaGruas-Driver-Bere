@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:id="@+id/total"
+        android:textColor="@color/topBar"
+        android:layout_above="@+id/userContactDetails"
+        android:text="$ 987.98"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:id="@+id/userContactDetails"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/marginRight"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:background="@drawable/background_profile">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:id="@+id/userContactDetailsPic"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userContactDetailsName"
+            android:layout_toEndOf="@+id/userContactDetailsPic"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/userContactDetailsPic"
+            android:text="@string/driver_name"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/userRatingNum"
+            android:layout_below="@+id/userContactDetailsName"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginStart="15dp"
+            android:id="@+id/userRating"
+            android:progressTint="@color/buttonOrange"
+            android:max="5"
+            android:isIndicator="false"
+            android:rating="3"
+            android:numStars="5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userRatingNum"
+            android:text="3"
+            android:layout_alignStart="@+id/userContactDetailsName"
+            android:layout_below="@+id/userContactDetailsName"
+            android:gravity="center" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/userContactDetails"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_client"
+            android:textSize="22sp"
+            android:id="@+id/rate"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate"
+            android:layout_marginTop="5dp"
+            android:id="@+id/driverRating"
+            android:progressTint="@color/buttonOrange"
+            android:max="5"
+            android:layout_centerHorizontal="true"
+            android:isIndicator="false"
+            android:rating="0"
+            android:numStars="5"/>
+
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driverRating"
+            android:layout_centerHorizontal="true"
+            android:text="@string/submit"
+            android:id="@+id/submit"
+            android:background="@drawable/blue_rounded_button"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

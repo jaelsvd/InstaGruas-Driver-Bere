@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TowTruckDriver</string>
+    <string name="google_maps_key">AIzaSyBPCNQhqyfcbxWGoWHH8Lj4XzzEETznn_0</string>
+    <string name="go_online">Go Online</string>
+    <string name="go_offline">Go Offline</string>
+    <string name="tab1">Home</string>
+    <string name="tab2">Ratings</string>
+    <string name="tab3">Account</string>
+    <string name="driver_name">Osaid Tahir</string>
+    <string name="driver_email">osaid.tahir.mot@gmail.com</string>
+    <string name="driver_phone">03314486605</string>
+    <string name="driver_rating_text">Your Average Rating</string>
+    <string name="minimumRate">Minimum Rate</string>
+    <string name="totalDistanceRate">Total Distance Rate</string>
+    <string name="timeRate">Time Rate</string>
+    <string name="total">Total</string>
+    <string name="truck_type">Truck</string>
+    <string name="time">07:50 PM</string>
+    <string name="time_ten">10</string>
+    <string name="address">Address:</string>
+    <string name="pick_up">Pick Up!</string>
+    <string name="userPhone">03314486605</string>
+    <string name="user_address">G1 Block, Johar Town Lahore Pakistan</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="call">Call</string>
+    <string name="no_history_found">No History Found</string>
+    <string name="rate_client">Rate Client</string>
+    <string name="submit">Submit</string>
+    <string name="totalFare">$ 44.50</string>
+    <string name="totalTime">48 min</string>
+    <string name="date">Wed, January 04, 2017</string>
+    <string name="originAddress">G1 Block Model Town Lahore</string>
+    <string name="destinationAddress">Johar Town Lahore</string>
+</resources>
